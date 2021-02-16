@@ -1,0 +1,7 @@
+pass:
+  script:
+    - exit 0
+
+fail:
+  script:
+    - exit 1
