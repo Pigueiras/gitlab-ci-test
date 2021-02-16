@@ -1,7 +1,15 @@
-pass:
+always:
   script:
     - exit 0
 
-fail:
+on-external-prs:
   script:
-    - exit 1
+    - exit 0
+  only:
+    - external_pull_requests
+
+except-prs:
+  script:
+    - exit 0
+  except:
+    - external_pull_requests
